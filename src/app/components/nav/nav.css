@@ -23,12 +23,12 @@ nav {
     align-items: center;
     gap: 10px;
     text-decoration: none;
-    color: #0d6efd;
+    color: #ff861b;
     font-weight: 700;
 }
 
 .logo-icon {
-    background: #0d6efd;
+    background: #ff861b;
     color: #fff;
     padding: 6px 10px;
     border-radius: 8px;
@@ -51,19 +51,19 @@ ul {
 ul a {
     text-decoration: none;
     color: #333;
-    font-weight: 500;
+    font-weight: 700;
     font-size: 14px;
     padding-bottom: 4px;
     transition: color 0.15s;
 }
 
 ul a:hover {
-    color: #0d6efd;
+    color: #ff861b;
 }
 
 ul a.active {
-    color: #0d6efd;
-    border-bottom: 2px solid #0d6efd;
+    color: #ff861b;
+    border-bottom: 2px solid #ff861b;
 }
 
 .actions {
@@ -73,8 +73,8 @@ ul a.active {
 
 .btn-login {
     background: transparent;
-    color: #0d6efd;
-    border: 1px solid #0d6efd;
+    color: #ff861b;
+    border: 1px solid #ff861b;
     padding: 8px 18px;
     border-radius: 6px;
     cursor: pointer;
@@ -83,9 +83,9 @@ ul a.active {
 }
 
 .btn-join {
-    background: #0d6efd;
+    background: #ff861b;
     color: #fff;
-    border: 1px solid #0d6efd;
+    border: 1px solid #ff861b;
     padding: 8px 18px;
     border-radius: 6px;
     cursor: pointer;
