@@ -1,1 +1,17 @@
 /* You can add global styles to this file, and also import other style files */
+.page {
+    padding: 60px 8%;
+    min-height: calc(100vh - 70px);
+}
+
+.page h1 {
+    font-size: 32px;
+    margin-bottom: 12px;
+    color: #212529;
+}
+
+.page p {
+    color: #6c757d;
+    font-size: 16px;
+    line-height: 1.6;
+}

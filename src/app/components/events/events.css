@@ -1,0 +1,252 @@
+.hero {
+    background: #3c7a9c;
+    color: #fff;
+    padding: 70px 8% 80px;
+}
+
+.hero-inner {
+    max-width: 900px;
+}
+
+.hero-eyebrow {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin: 0 0 14px;
+    opacity: 0.85;
+}
+
+.hero-title {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 56px;
+    font-weight: 700;
+    margin: 0 0 16px;
+    line-height: 1.1;
+}
+
+.hero-subtitle {
+    font-size: 16px;
+    opacity: 0.95;
+    margin: 0;
+    max-width: 620px;
+    line-height: 1.6;
+}
+
+.events-content {
+    background: #f4f6f8;
+    padding: 60px 8% 80px;
+}
+
+.section-eyebrow {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #e07b2d;
+    /* orange */
+    margin: 0 0 10px;
+}
+
+.section-title {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 42px;
+    font-weight: 700;
+    color: #1f2937;
+    margin: 0 0 30px;
+    line-height: 1.15;
+}
+
+.filter-bar {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.filter-bar button {
+    background: #fff;
+    color: #3c7a9c;
+    border: 1px solid #3c7a9c;
+    padding: 8px 16px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 14px;
+    transition: 0.15s;
+}
+
+.filter-bar button:hover {
+    background: #3c7a9c;
+    color: #fff;
+}
+
+.filter-bar .multi {
+    background: #e07b2d;
+    color: #fff;
+    border-color: #e07b2d;
+}
+
+.filter-bar .multi:hover {
+    background: #c96a25;
+}
+
+.query-box {
+    background: #fff3cd;
+    border-left: 4px solid #ffc107;
+    padding: 10px 14px;
+    border-radius: 6px;
+    margin-bottom: 12px;
+    font-size: 14px;
+}
+
+.event-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 26px;
+    margin-top: 24px;
+}
+
+.event-card {
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.event-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.1);
+}
+
+/* Top colored block */
+.card-hero {
+    height: 130px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+}
+
+.hero-teal {
+    background: #5b9bb8;
+}
+
+.hero-orange {
+    background: #e8a355;
+}
+
+.card-hero-title {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 26px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-align: center;
+}
+
+.card-body {
+    padding: 22px 22px 24px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+
+.category-badge {
+    display: inline-block;
+    align-self: flex-start;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+    padding: 4px 12px;
+    border-radius: 20px;
+    margin-bottom: 12px;
+}
+
+.badge-training {
+    background: #d9e6f0;
+    color: #3c7a9c;
+}
+
+.badge-seminar {
+    background: #fbe3cc;
+    color: #b75f1a;
+}
+
+.badge-workshop {
+    background: #e4e9ee;
+    color: #4b5563;
+}
+
+
+.card-title {
+    font-size: 19px;
+    font-weight: 700;
+    color: #1f2937;
+    margin: 0 0 12px;
+    line-height: 1.3;
+}
+
+
+.card-meta {
+    font-size: 14px;
+    color: #6b7280;
+    margin: 0 0 8px;
+}
+
+
+.card-fee {
+    font-size: 14px;
+    color: #374151;
+    margin: 4px 0 14px;
+}
+
+.card-fee strong {
+    color: #1f2937;
+    font-weight: 700;
+}
+
+
+.card-desc {
+    font-size: 14px;
+    color: #4b5563;
+    margin: 4px 0 16px;
+    line-height: 1.5;
+}
+
+
+.btn-primary,
+.btn-outline {
+    display: inline-block;
+    align-self: flex-start;
+    margin-top: auto;
+    padding: 10px 22px;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 14px;
+    text-decoration: none;
+    transition: 0.15s;
+}
+
+.btn-primary {
+    background: #e07b2d;
+    color: #fff;
+}
+
+.btn-primary:hover {
+    background: #c96a25;
+}
+
+.btn-outline {
+    background: #fff;
+    color: #3c7a9c;
+    border: 1.5px solid #3c7a9c;
+}
+
+.btn-outline:hover {
+    background: #3c7a9c;
+    color: #fff;
+}

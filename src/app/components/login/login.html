@@ -1,1 +1,45 @@
-<p>login works!</p>
+<div class="login-page">
+    <div class="login-card">
+        <p class="eyebrow">YRA ACCOUNT</p>
+        <h1 class="title">Welcome back</h1>
+        <p class="subtitle">Sign in to access your member dashboard.</p>
+
+        <form (submit)="onSubmit($event)">
+            <div class="field">
+                <label for="email">Email address</label>
+                <input id="email" type="email" placeholder="you@example.com" [formField]="loginForm.email" />
+                @if (
+                loginForm.email().touched() &&
+                loginForm.email().errors().length
+                ) {
+                <p class="error">{{ loginForm.email().errors()[0].message }}</p>
+                }
+            </div>
+
+            <div class="field">
+                <label for="password">Password</label>
+                <input id="password" type="password" placeholder="••••••••" [formField]="loginForm.password" />
+                @if (
+                loginForm.password().touched() &&
+                loginForm.password().errors().length
+                ) {
+                <p class="error">{{ loginForm.password().errors()[0].message }}</p>
+                }
+            </div>
+
+
+            <label class="checkbox-row">
+                <input type="checkbox" [formField]="loginForm.rememberMe" />
+                <span>Remember me</span>
+            </label>
+
+            <button type="submit" class="submit-btn" [disabled]="loginForm().invalid()">
+                Sign in
+            </button>
+        </form>
+
+        <p class="footer-text">
+            New to YRA? <a routerLink="/join">Create an account</a>
+        </p>
+    </div>
+</div>

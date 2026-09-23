@@ -1,1 +1,93 @@
-<p>events works!</p>
+<section class="hero">
+    <div class="hero-inner">
+        <p class="hero-eyebrow">STAY CONNECTED</p>
+        <h1 class="hero-title">Events &amp; Training</h1>
+        <p class="hero-subtitle">
+            Register for upcoming YRA programmes or explore the training archive.
+        </p>
+    </div>
+</section>
+
+<section class="events-content">
+    <p class="section-eyebrow">UPCOMING</p>
+    <h2 class="section-title">Registration is open</h2>
+
+    <div class="filter-bar">
+        <span class="filter-label">Category:</span>
+        <button (click)="filterByCategory('BootCamp')">BootCamp</button>
+        <button (click)="filterByCategory('SLR')">SLR</button>
+        <button (click)="filterByCategory('SPSS')">SPSS</button>
+    </div>
+
+    <div class="filter-bar">
+        <span class="filter-label">Price:</span>
+        <button (click)="filterFree()">Free</button>
+        <button (click)="filterPaid()">Paid</button>
+    </div>
+
+    <div class="filter-bar">
+        <button class="multi" (click)="applyMultipleFilters()">
+            Apply Both Filters (Category + Fee)
+        </button>
+        <button class="clear" (click)="clearFilters()">Clear All</button>
+    </div>
+
+    @if (category() || fee()) {
+    <p class="query-box">
+        <strong>Active query params:</strong>
+        @if (category()) { <span> category={{ category() }}</span> }
+        @if (fee()) { <span> fee={{ fee() }}</span> }
+    </p>
+    }
+
+    <div class="event-grid">
+        @for (event of filteredEvents(); track event.id) {
+        <article class="event-card">
+            <div class="card-hero" [ngClass]="event.heroColor === 'orange' ? 'hero-orange' : 'hero-teal'">
+                <span class="card-hero-title">{{ event.title }}</span>
+            </div>
+
+            <div class="card-body">
+                <span class="category-badge" [ngClass]="'badge-' + event.categoryType">
+                    {{ event.category }}
+                </span>
+
+                <h3 class="card-title">{{ event.cardTitle }}</h3>
+
+                <p class="card-meta">
+                    {{ event.date | date: 'd MMM' }} · {{ event.location }} · {{ event.duration }}
+                </p>
+
+                @if (event.hasFee && event.fee) {
+                <p class="card-fee">
+                    Registration fee: <strong>{{ event.fee }}</strong>
+                </p>
+                } @else {
+                <p class="card-fee">
+                    <strong>Free</strong> — no registration fee
+                </p>
+                }
+
+                @if (event.shortDescription) {
+                <p class="card-desc">{{ event.shortDescription }}</p>
+                }
+
+                @if (event.hasFee) {
+                <a [routerLink]="['/event-details', event.id]" class="btn-primary">
+                    Register now
+                </a>
+                } @else {
+                <a [routerLink]="['/event-details', event.id]" class="btn-outline">
+                    View details
+                </a>
+                }
+            </div>
+        </article>
+        } @empty {
+        <p class="empty-state">
+            No events match the selected filters.
+            <button class="link-btn" (click)="clearFilters()">Clear filters</button>
+        </p>
+        }
+    </div>
+</section>
